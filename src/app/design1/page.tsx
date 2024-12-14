@@ -1,50 +1,100 @@
-import PowerOfDesign from "../components/PowerOfDesign";
-import RightImage from "../components/RightImage";
-import LeftImage from "../components/LeftImage";
-import RightColumn from "../components/RightColumn";
+import PowerOfDesign from "../components/Design1/PowerOfDesign";
+import RightImage from "../components/Design1/RightImage";
+import LeftImage from "../components/Design1/LeftImage";
+import RightColumn from "../components/Design1/RightColumn";
 import Image from "next/image";
+import BottomImage from "../components/Design1/BottomImage";
 
 export default function Design1() {
   return (
-    <div className="bg-[#010625] max-w-full overflow-x-hidden flex flex-col items-center">
-      <div className="px-[5%] grid grid-cols-[40%,60%] gap-10 place-items-center w-full w-max-full custom:w-[1440px]">
-        <div className="ps-[5%] mt-16">
-          <PowerOfDesign />
+    <main className="bg-[#010625] max-w-full overflow-x-hidden flex flex-col items-center custom:w-[1440px]">
+      <div className="grid grid-cols-12">
+        <div className="place-self-center ps-[20%] pt-[10%] row-span-2 col-span-5 flex flex-col text-white gap-5">
+          <div className="">
+            <span className="text-8xl leading-tight font-black">
+              Discover the power of design
+            </span>
+          </div>
+          <div className="text-xl text-pretty font-thin">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+            error ea unde quam! Beatae fuga vel ullam placeat, incidunt nobis
+            veritatis reiciendis error tempore.
+          </div>
+          <button className="p-3 w-[40%] text-2xl rounded-xl border bg-white text-[#010625] font-bold">
+            Explore
+          </button>
         </div>
-        <div className="flex gap-[5%] self-start w-full lg:w-[70%] custom:w-[100%]">
-          <RightImage />
+
+        <div className="row-span-1 place-self-start justify-self-center col-span-7 flex gap-[5%]">
+          <Image
+            src="/Images/Rectangle-27.png"
+            alt="First-rectangle.png"
+            height={473}
+            width={348}
+            className="object-contain max-w-full"
+          />
+          <Image
+            src="/Images/Rectangle-31.png"
+            alt="First-rectangle.png"
+            height={473}
+            width={348}
+            className="object-contain max-w-full"
+          />
         </div>
-        <div className="grid grid-cols-[60%,40%] self-start w-full col-span-2">
-          <LeftImage />
-          <RightColumn />
+
+        <div className="ps-[10%] place-self-start row-start-3 row-span-1 col-span-7">
+          <Image
+            src="/Images/Lower-left-image.png"
+            alt="Lower-left-image.png"
+            height={304}
+            width={676}
+            className=""
+          />
         </div>
-      </div>
-      <div className="my-[5%] flex custom:gap-14 xl:gap-10 2xl:gap-12">
-      <Image
+
+        <div className="ps-[15%] pt-[25%] row-span-2 col-span-4 row-start-2 col-start-8 flex flex-col gap-7 text-white text-pretty">
+          <div className="w-[96px] h-[8px] bg-white rounded-full"></div>
+          <div className="font-bold text-4xl">01</div>
+          <div className="font-thin text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            pariatur unde enim?
+          </div>
+          <div className="font-bold text-4xl">02</div>
+          <div className="font-thin text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            pariatur unde enim?
+          </div>
+          <div className="font-bold text-4xl">03</div>
+          <div className="font-thin text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            pariatur unde enim?
+          </div>
+        </div>
+
+        <div className="p-[5%] row-start-4 col-span-12 justify-self-center flex gap-5">
+          <Image
             src="/Images/Flex-image-1.png"
             alt="First-rectangle.png"
-            height={412}
-            width={260}
-            // layout="intrinsic"
-            className="object-contain w-full"
+            width={412}
+            height={260}
+            className=""
           />
           <Image
             src="/Images/Flex-image-2.png"
             alt="First-rectangle.png"
-            height={412}
-            width={260}
-            // layout="intrinsic"
-            className="object-contain w-full"
+            width={412}
+            height={260}
+            className=""
           />
           <Image
             src="/Images/Flex-image-3.png"
             alt="First-rectangle.png"
-            height={412}
-            width={260}
-            // layout="intrinsic"
-            className="object-contain w-full"
+            width={412}
+            height={260}
+            className=""
           />
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
