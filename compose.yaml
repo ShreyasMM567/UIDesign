@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+    image: 356bbaaae7cd
+    ports: 
+      - "3000"
+    deploy:
+      replicas: 3
+    restart: always
+    environment:
+      NODE-ENV: development
+    

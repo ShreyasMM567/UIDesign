@@ -4,5 +4,8 @@
 
 body{
   font-family: 'Lato', sans-serif;
-  background-color: #010625;
+}
+
+.bg-gradient-opacity {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6));
 }
